@@ -10,3 +10,28 @@
         font-family: 'Poppins', sans-serif;
     }
 }
+body{
+    background-image: url('bg.jpg');
+    background-repeat: none;
+    background-size: cover;
+}
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #2d1950;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(13, 3, 59, 0.959);
+    border-radius: 12px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(16, 3, 70, 0.911);
+    border-radius: 12px;
+  }
