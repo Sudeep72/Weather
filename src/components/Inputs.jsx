@@ -8,10 +8,16 @@ function Inputs({ setQuery, units, setUnits }) {
   const handleUnitsChange = (e) => {
     const selectedUnit = e.currentTarget.name;
     if (units !== selectedUnit) setUnits(selectedUnit);
+    
   };
-
+  const _handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSearchClick();
+    } 
+  }
   const handleSearchClick = () => {
     if (city !== "") setQuery({ q: city });
+    
   };
 
   const handleLocationClick = () => {
@@ -34,6 +40,7 @@ function Inputs({ setQuery, units, setUnits }) {
     <div className="flex flex-row justify-center my-6">
       <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
         <input
+        onKeyDown={_handleKeyDown}
           value={city}
           onChange={(e) => setCity(e.currentTarget.value)}
           type="text"
@@ -44,7 +51,8 @@ function Inputs({ setQuery, units, setUnits }) {
           size={25}
           className="text-white cursor-pointer transition ease-out hover:scale-125"
           onClick={handleSearchClick}
-        />
+          onKeyDown={_handleKeyDown}
+          />
         <UilLocationPoint
           size={25}
           className="text-white cursor-pointer transition ease-out hover:scale-125"
