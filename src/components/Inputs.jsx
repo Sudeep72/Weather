@@ -40,7 +40,7 @@ function Inputs({ setQuery, units, setUnits }) {
     <div className="flex flex-row justify-center my-6">
       <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
         <input
-        onKeyDown={_handleKeyDown}
+        onKeyDown={_handleKeyDown} 
           value={city}
           onChange={(e) => setCity(e.currentTarget.value)}
           type="text"
